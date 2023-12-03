@@ -1,3 +1,44 @@
 body {
     background-color: steelblue;
 }
+
+/* 
+selector: el elemento al que se va a aplicar estilo
+{
+    propiedad: valor;
+    propiedad2: valor;
+    propiedad3: valor;
+    lo que vamos a cambiar
+    valor: el nuevo valor que vamos a dar
+    propiedad: valor -> se denomina declaración se separan por ;
+    al conjunto de selector+declaración se le denomina regla
+}
+*/
+
+/* 
+    SELECTORES
+    Selectores simples
+        Selectores elementales
+            Selector universal -> *
+            Selector de tipo o etiqueta -> nombre de la etiqueta
+        Selectores de atributo
+            id -> id del elemento #id
+            clase -> clase del elemento .class
+            otros atributos
+                 [atributo]
+                 [atributo="valor"]
+                 [atributo^=valor] selecciona los atributos que empiezan por ese valor
+                 [atributo*=valor] selecciona todas las concidencias
+                 [atributo$=valor] selecciona los que terminan por el valor
+
+    Selectores compuestos
+        Selectores agrupados
+            separamos los nombres de clases con ,
+        Selectores combinadores
+            selector descendiente: padre .hijo
+            selector hermano siguiente: selector + siguiente selector
+            selector hermanos siguientes selector ~ selector, seleccionara todos los que cumplan el criterio
+        Pseudoclases - Pseudoelementos
+
+
+*/
