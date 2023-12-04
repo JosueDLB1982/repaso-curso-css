@@ -1,6 +1,6 @@
-body {
+/* body {
     background-color: steelblue;
-}
+} */
 
 /* 
 selector: el elemento al que se va a aplicar estilo
@@ -38,7 +38,23 @@ selector: el elemento al que se va a aplicar estilo
             selector descendiente: padre .hijo
             selector hermano siguiente: selector + siguiente selector
             selector hermanos siguientes selector ~ selector, seleccionara todos los que cumplan el criterio
+            selector hijo directo: selector > selectorHijo
         Pseudoclases - Pseudoelementos
-
-
 */
+
+/* 
+    ¿Cómo funciona CSS?
+    Especificidad: establece cómo de especifico es un selector para saber qué estilo aplicar.
+    El cálculo se realiza con la siguinete formula:
+            Etiquetas y pseudoelementos 001
+            clases, atributos y pseudoclases 010
+            ids 100
+            estilos en linea 1000
+            !important GANA a TODO
+        Cascada funciona siempre que tengan el mismo nivel de especificidad
+        Herencia: Es la capacidad que tienen algunos elementos de heredar propiedades de sus elementos contenedores. El atributo inherit fuerza la herencia. El atributo initial impide la herencia.
+*/
+
+.title {
+    background-color: aqua;
+}
