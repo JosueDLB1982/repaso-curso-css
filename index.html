@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/styles-dist.css">
-    <title>Prefijos Propietarios</title>
+    <title>Box Model</title>
 </head>
 <body>
+    <!--
+        Box Model o modelo de cajas.
+        Todas las web se componen de cajas. Estas cajas tienen distintas propiedades.
+        Contenido
+        Borde
+        Padding -> separación entre el borde de la caja y su contenido
+        Margin -> separación entre una caja y otra
+        width -> ancho de la caja
+        height -> alto de la caja
+        box-sizing: border-box -> https://developer.mozilla.org/es/docs/Web/CSS/box-sizing
+    -->
     <main>
+        <header class="header">
+            <nav class="menu">Menú</nav>
+        </header>
         <h1 id="title" class="title">
-            Prefijos Propietarios
+            Box Model
         </h1>
+        <div class="block">Elemento de Bloque</div>
+        <a href="#" class="inline">Elemento de Línea</a>
+        <a href="#" class="inline">Elemento de Línea 2</a>
     </main>
 </body>
 </html>

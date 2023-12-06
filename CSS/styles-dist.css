@@ -1,60 +1,36 @@
-/* body {
-    background-color: steelblue;
-} */
-
-/* 
-selector: el elemento al que se va a aplicar estilo
-{
-    propiedad: valor;
-    propiedad2: valor;
-    propiedad3: valor;
-    lo que vamos a cambiar
-    valor: el nuevo valor que vamos a dar
-    propiedad: valor -> se denomina declaración se separan por ;
-    al conjunto de selector+declaración se le denomina regla
+body {
+    background-color: #333;
+    color: #fff;
 }
-*/
 
-/* 
-    SELECTORES
-    Selectores simples
-        Selectores elementales
-            Selector universal -> *
-            Selector de tipo o etiqueta -> nombre de la etiqueta
-        Selectores de atributo
-            id -> id del elemento #id
-            clase -> clase del elemento .class
-            otros atributos
-                 [atributo]
-                 [atributo="valor"]
-                 [atributo^=valor] selecciona los atributos que empiezan por ese valor
-                 [atributo*=valor] selecciona todas las concidencias
-                 [atributo$=valor] selecciona los que terminan por el valor
+.block {
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    /* margin: 25px 25px 10px; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border:  5px solid red;
+}
 
-    Selectores compuestos
-        Selectores agrupados
-            separamos los nombres de clases con ,
-        Selectores combinadores
-            selector descendiente: padre .hijo
-            selector hermano siguiente: selector + siguiente selector
-            selector hermanos siguientes selector ~ selector, seleccionara todos los que cumplan el criterio
-            selector hijo directo: selector > selectorHijo
-        Pseudoclases - Pseudoelementos
-*/
+.inline {
+    background-color: lightcoral;
+    color: inherit;
 
-/* 
-    ¿Cómo funciona CSS?
-    Especificidad: establece cómo de especifico es un selector para saber qué estilo aplicar.
-    El cálculo se realiza con la siguinete formula:
-            Etiquetas y pseudoelementos 001
-            clases, atributos y pseudoclases 010
-            ids 100
-            estilos en linea 1000
-            !important GANA a TODO
-        Cascada funciona siempre que tengan el mismo nivel de especificidad
-        Herencia: Es la capacidad que tienen algunos elementos de heredar propiedades de sus elementos contenedores. El atributo inherit fuerza la herencia. El atributo initial impide la herencia.
-*/
+    /* Los elementos inline no tienen medida. El tamaño lo determina su contenido. No se les aplica margin ni arriba ni abajo. Sólo tienen margenes horizontales */
+
+    margin-left: 25px;
+}
 
 .title {
-    background-color: lightcoral;
+    background-color: blue;
+    text-align: center;
+
+}
+
+.header {
+    background-color: red;
+    color: yellow;
+    height: 50px;
 }
