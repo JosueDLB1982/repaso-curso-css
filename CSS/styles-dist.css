@@ -1,11 +1,16 @@
 /*
-    La propiedad display nos sirve para cambiar el contexto de los elementos dentro del navegador
+    Outline es la propiedad que nos permite dibujar un borde por fuera del modelo de caja.
+    Es un shorthand que engloba
+        outline-width: Controla el ancho del ouline
+        outline-style: Controla el estilo del outline
+        outline-color: Controla el color del outline
 
-    Admite varios valores
-        none -> Hace que el elemento no se muestre, pero sigue cargándose.
-        block -> Hace que el elemento sea de bloque
-        inline -> Hace que el elemento sea de línea
-        inline-block -> Hace que el elemento sea de línea pero admite medidas y márgenes verticales
+    Tiene las mísmas propiedades y sintaxis que border, pero con algunas diferencias.
+        No ocupa sitio, ya que no forma parte del box-model
+        No se puede redondear
+        No se pueden controlar los lados de forma independiente
+
+    También cuenta con la propiedad outline-offset, que nos permite aumentar o disminuir la distancia del outline respecto a la caja a la que pertence
 */
 
 body {
@@ -13,19 +18,25 @@ body {
     color: #fff;
 }
 
-.text {
-    background-color: lightcoral;
-    /* display: none; */
-    /* display: inline; */
+.title {
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-.link {
-    background-color: #fff;
-    /* display: block;
-    margin-bottom: 3px; */
-    display:  inline-block; /* permite dar dimensiones a los elementos de línea */
-    width: 200px;
-    height: 100px;
-    margin-top: 50px;
-
+.border, .outline {
+    background-color: #666;
+    width: 100px;
+    padding: 10px 25px;
+    margin: 50px 100px;
 }
+
+.border {
+    border: 2px solid lightcoral;
+}
+
+.outline {
+    outline: 3px inset lightcoral;
+    outline-offset: -13px;
+    border: 3px solid lightgreen;
+}
+
