@@ -1,6 +1,11 @@
-/* 
-    Colapsado de Márgenes
-    Los márgenes verticales colapsan
+/*
+    La propiedad display nos sirve para cambiar el contexto de los elementos dentro del navegador
+
+    Admite varios valores
+        none -> Hace que el elemento no se muestre, pero sigue cargándose.
+        block -> Hace que el elemento sea de bloque
+        inline -> Hace que el elemento sea de línea
+        inline-block -> Hace que el elemento sea de línea pero admite medidas y márgenes verticales
 */
 
 body {
@@ -8,27 +13,19 @@ body {
     color: #fff;
 }
 
-.header {
+.text {
     background-color: lightcoral;
+    /* display: none; */
+    /* display: inline; */
+}
+
+.link {
+    background-color: #fff;
+    /* display: block;
+    margin-bottom: 3px; */
+    display:  inline-block; /* permite dar dimensiones a los elementos de línea */
+    width: 200px;
     height: 100px;
-    margin-bottom: 20px;
-    /* display: flex;
-    align-items: center; */
-}
+    margin-top: 50px;
 
-.title {
-    margin: 0;
-}
-
-.box-1, .box-2 {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    background-color: lightcyan;
-    width: 300px;
-    height: 300px;
-}
-
-.box-2 {
-    margin-top: 20px;
 }
