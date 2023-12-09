@@ -1,11 +1,16 @@
 /*
-    Text-align es la propiedad que nos permite alinear horizontalmente el contenido de un elemento de bloque siempre que el contenido NO TENGA ANCHO DECLARADO
+    La propiedad box-shadow se creó para añadir efectos de sombra a nuestra caja.
 
-    Acepta 4 posibles valores
-        text-align:left; -> Alinea el contenido a la izquierda
-        text-align:right; -> Alinea el contenido a la derecha
-        text-align:center; -> Alinea el contenido al centro
-        text-align:justify; -> Alinea el contenido de forma justificada. No es recomendable usarlo.
+    En esencia lo que hace es crear un clon de la caja respetando la forma de su box-model (ancho, alto, redondez)
+
+    La sintaxis de box-shadow se puede escribir de distintas formas según lo que queramos conseguir.
+      Los valores que le podemos poner son:
+        offset-x -> Desplazamiento en x (obligatorio)
+        offset-y -> Desplazamiento en y (obligatorio)
+        blur-radius -> Desenfoque de la sombra
+        spread-radius -> Expansión de la sombra
+        color -> El color de la sombra, si no lo especificamos lo heredará del elemento al que pertenece
+        inset -> Determina si la sombra será interior o exterior
 */
 
 * {
@@ -17,52 +22,17 @@ body {
     color: #fff;
 }
 
-.title {
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.text {
-    text-align: center;
-}
-
 .box {
-    background-color: #666;
-    width: 100px;
-    padding: 10px 0;
-    margin: 20px 0;
-    border: 2px solid lightcoral;
+    background-color: darkcyan;
+    width: 200px;
+    padding: 50px;
+    color: lightskyblue;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px 0 blue, 15px 15px #222;
 
 }
-
-.link {
-    color: #fff;
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-/* Centrar una imagen sin contenedor */
-/* .img {
-    display: block;
-    width: 300px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* Centrar una imagen en su contenedor */
-.img {
-    width: 300px;
-    height: 150px;
-}
-.img-container {
-    text-align: center;
-}
-
 
 
