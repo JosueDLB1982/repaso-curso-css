@@ -1,17 +1,16 @@
 /*
-    Outline es la propiedad que nos permite dibujar un borde por fuera del modelo de caja.
-    Es un shorthand que engloba
-        outline-width: Controla el ancho del ouline
-        outline-style: Controla el estilo del outline
-        outline-color: Controla el color del outline
+    Text-align es la propiedad que nos permite alinear horizontalmente el contenido de un elemento de bloque siempre que el contenido NO TENGA ANCHO DECLARADO
 
-    Tiene las mísmas propiedades y sintaxis que border, pero con algunas diferencias.
-        No ocupa sitio, ya que no forma parte del box-model
-        No se puede redondear
-        No se pueden controlar los lados de forma independiente
-
-    También cuenta con la propiedad outline-offset, que nos permite aumentar o disminuir la distancia del outline respecto a la caja a la que pertence
+    Acepta 4 posibles valores
+        text-align:left; -> Alinea el contenido a la izquierda
+        text-align:right; -> Alinea el contenido a la derecha
+        text-align:center; -> Alinea el contenido al centro
+        text-align:justify; -> Alinea el contenido de forma justificada. No es recomendable usarlo.
 */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: #333;
@@ -23,20 +22,47 @@ body {
     margin-bottom: 20px;
 }
 
-.border, .outline {
+.text {
+    text-align: center;
+}
+
+.box {
     background-color: #666;
     width: 100px;
-    padding: 10px 25px;
-    margin: 50px 100px;
-}
-
-.border {
+    padding: 10px 0;
+    margin: 20px 0;
     border: 2px solid lightcoral;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
-.outline {
-    outline: 3px inset lightcoral;
-    outline-offset: -13px;
-    border: 3px solid lightgreen;
+.link {
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+
+/* Centrar una imagen sin contenedor */
+/* .img {
+    display: block;
+    width: 300px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+/* Centrar una imagen en su contenedor */
+.img {
+    width: 300px;
+    height: 150px;
+}
+.img-container {
+    text-align: center;
+}
+
+
 
