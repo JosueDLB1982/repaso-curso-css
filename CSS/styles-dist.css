@@ -48,29 +48,16 @@
 body {
     background-color: #333;
     color: #fff;
+    padding-top: 60px; /* para que el h1 no quede tapado con el header */
 }
 
-.box {
-    width: 100px;
-    height: 100px;
+.header {
     text-align: center;
-    color: black;
-    /* border-radius: 1px; */
+    padding: 25px 0;
+    background-color: lightskyblue;
+    color: red;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-
-.box-1 {
-    background-color: lightcoral;
-    position: absolute;
-    /* left: 100px; */
-}
-
-.box-2 {
-    background-color: lightgreen;
-    position: absolute;
-    /* position: absolute;
-    bottom: 0;
-    right: 0; */
-}
-
-
 
