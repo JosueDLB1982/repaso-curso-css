@@ -52,28 +52,45 @@ body {
     color: #fff;
 }
 
-img {
-    width: 100%;
-    display: block;
+.container {
+    width: 200px;
+    height: 200px;
+    background-color: #555;
+    position: relative;
+    /* z-index: -100; */
 }
 
-.header {
+.box {
+    width: 100px;
+    height: 100px;
     text-align: center;
-    background-color: lightskyblue;
-    color: red;
-    /* position: sticky;
-    top: 0; */
+    color: #333;
 }
 
-/* .menu {
-    position: sticky;
-    top: 0;
-} */
-
-.article-title {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    margin: 0;
+.box-1 {
+    background-color: lightcoral;
+    position: relative;
+    left: 150px;
+    z-index: -1; /* Si queremos colocar el padre sobre el hijo, se debe aplicar el z-index al hijo. No funcionará tratar de poner el padre sobre el hijo, se debe colocar al hijo detras del padre. Para que funcione, eñ padre no puede tener ningún z-index declarado y el hijo debe tener un valor de z-index negativo*/
 }
 
+.box-1-2 {
+    background-color: aqua;
+    position: relative;
+    bottom: 100px;
+    left: 170px;
+    z-index: -10; /* Se coloca un número menor para que quede detras de todo */
+}
+
+.box-2 {
+    background-color: lightgreen;
+    position: relative;
+    top: 50px;
+    z-index: -10;
+}
+
+.box-3 {
+    background-color: lightseagreen;
+    position: relative;
+    z-index: -1;
+}
