@@ -59,7 +59,8 @@
       min-height: Indica el alto minimo que puede alcanzar el elemento.
       max-height: Indica el alto máximo que puede alcanzar el elemento.
 
-      clase 42 https://www.youtube.com/watch?v=DFZD-Wscgg4&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=43
+      clase 44 % vs auto 
+      https://www.youtube.com/watch?v=h-n2GmT1SOk&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=45
 */
 
 * {
@@ -72,11 +73,15 @@ body {
 }
 
 
-.link {
-    background-color: lightcoral;
-    color: #333;
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-    font-size: 1rem;
-    /* se establece el font-size en rem y las medidas en em para que se mantengan las proporciones */
+.box {
+    width: auto;
+    height: 250px;
+    background-color: lightgreen;
+}
+
+.box-children {
+    width: auto;
+    height: 50%;
+    margin-left: 25%;
+    background-color: lightseagreen;
 }
