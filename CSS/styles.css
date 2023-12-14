@@ -59,8 +59,8 @@
       min-height: Indica el alto minimo que puede alcanzar el elemento.
       max-height: Indica el alto máximo que puede alcanzar el elemento.
 
-      clase 44 % vs auto 
-      https://www.youtube.com/watch?v=h-n2GmT1SOk&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=45
+      clase 46 viewport responsive
+      https://www.youtube.com/watch?v=a0h8JTYfYuQ&list=PLROIqh_5RZeDbvISffzihyxzqJBt_z3-Z&index=47
 */
 
 * {
@@ -72,16 +72,28 @@ body {
     color: lightcoral;
 }
 
+.header {
+    background-color: lightskyblue;
+    text-align: center;
+    /* height: 100vh;
+    width: 100vw; */
+}
 
 .box {
-    width: auto;
-    height: 250px;
+    /* height: 100vh; */
+    height: 300px;
+    width: 300px;
+    /* width: 100vw; 
+     para evitar barra de scroll horizontal, usar 100% en lugar de 100vw
+    */
     background-color: lightgreen;
+    text-align: center;
 }
 
 .box-children {
-    width: auto;
-    height: 50%;
-    margin-left: 25%;
+    position: sticky;
+    top: 0;
+    width: 50vmin;
+    height: 150px;
     background-color: lightseagreen;
 }
