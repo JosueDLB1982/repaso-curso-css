@@ -69,48 +69,10 @@
 
 body {
     background-color: #333;
-    color: lightcoral;
-    position: relative;
-    border: 4px solid red;
-    margin: 0;
-    min-height: 100vh;
-}
-
-.text {
-    padding-bottom: 70px;
-}
-
-.header {
-    background-color: lightskyblue;
-    text-align: center;
-    /* height: 100vh;
-    width: 100vw; */
 }
 
 .box {
-    /* height: 100vh; */
-    height: 60vh;
-    max-height: 300px;
-    min-height: 100px;
-    width: 100%;
-    max-width: 600px;
-    /* width: 100vw; 
-     para evitar barra de scroll horizontal, usar 100% en lugar de 100vw
-    */
-    background-color: lightgreen;
-    text-align: center;
-}
-
-p {
-    margin: 0;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem 0;
-    background-color: lightseagreen;
-    text-align: center;
-    opacity: 50%;
+    border-top: 400px solid red;
+    border-left: 320px solid transparent;
+    border-right: 320px solid transparent;
 }
