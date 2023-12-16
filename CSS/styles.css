@@ -92,6 +92,16 @@ body {
 .box {
     width: 200px;
     height: 200px;
-    background-color: lightcoral;
+    /* background-color: rgb(0,0,0); negro puro */
+    /* background-color: rgb(255, 255, 255); Blanco puro */
+    /* background-color: rgb(128, 128, 128); Gris puro */
+    /* background-color: rgb(255, 0, 0); rojo puro */
+    /* background-color: rgb(0, 255, 0); Verde puro lime */
+    /* background-color: rgb(0, 0, 255); azul puro */
+    background-color: rgb(186 85 211 / .5);
+    /* background-color: rgb(255, 0, 255); magenta */
+    /* background-color: rgb(0, 255, 255); cian */
+    /* background-color: rgb(255, 255, 0); amarillo */
+
     border:  5px solid currentColor;
 }
