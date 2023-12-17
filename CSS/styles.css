@@ -81,29 +81,14 @@
 }
 
 body {
-    background-color: mediumorchid;
+    background-color: hsl(288, 60%, 58%);
     color: #333;
 }
-
-/* .main {
-    color: aquamarine;
-} */
 
 .box {
     width: 200px;
     height: 200px;
-    /* color hexadecimal */
-    /* background-color: #FFFFFF; blaco puro */
-    /* background-color: #000; negro puro */
-    /* background-color: #FF0000; rojo puro */
-    /* background-color: #00FF00; lime */
-    /* background-color: #0F0; lime */
-    /* background-color: #00F; azul puro */
-    /* background-color: #FF0; amarillo */
-    /* background-color: #F0F; magenta */
-    background-color: #0FF; /* cian */
-    /* background-color: #808080; gris puro */
-    /* border:  5px solid currentColor; */
-    margin: 10px;
-    box-shadow: 5px 5px 10px #0008; /* cuarto canal para opacidad
-*/}
+    background-color: hsl(0, 100%, 50%);
+    margin: 20px ;
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, .8);
+}
