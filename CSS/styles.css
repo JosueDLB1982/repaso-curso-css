@@ -109,14 +109,8 @@
 }
 
 body {
-    background-color: hsl(288, 60%, 58%);
-    color: #333;
-}
-
-.box {
-    width: 200px;
-    height: 200px;
-    background-color: hsl(0, 100%, 50%);
-    margin: 20px ;
-    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, .8);
+   background-color: #333;
+   color: aliceblue;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 700;
 }
