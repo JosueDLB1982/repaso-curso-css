@@ -1,79 +1,107 @@
 /*
-   Colores
-   La mayoría las pantallas funcionan con un modo de color aditivo. La suma de RGB da como resultado un blanco
-   Tenemos varias formas de dar color en CSS
+  La tipografía es la ciencia que estudia el diseño y uso de los tipos de letra
 
-    Keywords -> Palabras clave que representan colores https://www.w3.org/wiki/CSS/Properties/color/keywords
+  Las fuentes son tipos específicos de letra
+
+  Los glifos son cada uno de los dibujos que representan cada símbolo de la fuente, incluidos los espacios.
+
+  Los estilos de fuente son las modificaciones que se hacen a las fuentes, como el grosor o la inclinación.
+
+  Familia tipográfica, son las diferentes fuentes que pertenecen a una misma fuente base.
+
+  Cuando usamos una propiedad text-* estamos afectando a un bloque completo
+
+  Cuando utilizamos una propiedad font-* afectamos a la fuente del texto.
+
+  Fuentes predeterminadas, son las fuentes que se consideran seguras ya que son genéricas y no establecen una familia tipográfica, si no un estilo de fuente.
+    serif: Fuentes que tienen serifas (adornos en los caracteres)
+
+    sans-serif: Fuentes sin serifas
+
+    monospace: Fuentes que tienen el mismo espaciado entre todos sus caracteres.
+
+    cursive: Fuentes que pretenden emular escritura a mano, con ligaduras y trazos fluidos
+
+    fantasy: Fuentes que suelen ser decorativas
+
+  Fuentes desde un servidor remoto, son fuentes que se encuentran en un servidor y que nosotros descargamos para su uso, la más famosa es Google Fonts
+
+  Siempre que utilicemos fuentes no genéricas, debemos poner fuentes genéricas de fallback (respaldo)
     
-    IMPORTANTE: Recordad que existe el color "transparent"
+  Google Icons
+    Material Icons
+       https://fonts.googleapis.com/css?family=Material+Icons
+    Material Icons Outlined
+       https://fonts.googleapis.com/css?family=Material+Icons+Outlined
+    Material Icons Two Tone
+       https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone
+    Material Icons Rounded
+       https://fonts.googleapis.com/css?family=Material+Icons+Round
+    Material Icons Sharp
+       https://fonts.googleapis.com/css?family=Material+Icons+Sharp
+      
+    Nota: Si vas a usar una gran cantidad de iconos en tu web compensa usar la librería remota
+    Si sólo usarás unos pocos es mejor descargarlos en formato svg y utilizarlos como imágenes
 
-  CurrentColor: Es una palabra clave que se puede usar en lugar de cualquier valor de color y usará el valor ya sea establecido o heredado en la propiedad color.
+   Formatos para fuentes
+      True Type Font (TTF) -> Fue el primer formato estándar.
 
-  RGB/RGBA
-    En el modo RGB tenemos tres canales (Red, Green, Blue) y tenemos 8 bits de color por canal, (cada bit tiene dos posibles valores 0 ó 1) lo que significa que tenemos 2^8 posibles valores, que van desde 0 hasta 255.
-    
-    Esto nos da un total de 255 * 255 * 255 = 16.581.375 colores.
+      Open True Type Font (OTF) -> Facilita o implementa la creación de las curvas.
 
-    Su sintaxis es rgb(R,G,B)
+      Web Open Font Format (WOFF) (WOFF2) -> Es un formato mucho más ligero y mejora el rendimiento. Funciona a través de metadatos. WOFF tiene soporte total y WOFF2 no funciona en internet explorer.
 
-    Si ponemos todos los canales a 0 tendremos un negro puro y si los ponemos a 255 tendremos un blanco.
+      Scalable Vector Graphics (SVG) -> Para efectos y animaciones sobre el texto, no es recomendable usarlo en el texto genérico de la web, tiene muchos problemas.
 
-    Para movermos por la gama de grises debemos poner los 3 canales con el mismo valor, si ponemos los 3 canales a 128 tendremos el gris puro.
+      Embedded Open Type (EOT) -> Primer formato digital propuesto para sitios WEB y es comprimido. Se quedó como una propuesta pero no pasó a ser un estándar.
 
-    El modo RGB nos da la opción de utilizar un cuarto canal que correspondería al canal alpha, es decir, la transparencia, y su valor va desde 0 a 1. Tenemos dos sintaxis para utilizar el canal aplha
-      rgba(R,G,B,A)
-      rgb(R G B / A)
+   Regla @font-face
+      Esta es la forma de utilizar fuentes que tenemos descargadas y que no traemos de un servidor remoto, cuando usamos google fonts, esto es lo que está pasando por detrás.
 
-  Hexadecimal
-    La notación hexadecimal es la más común en desarrollo web, se basa en los mismos principios que el RGB pero escrito en notación hexadecimal.
+      La sintaxis es:
+         @font-face {
+            font-family: Nombre de la familia, se lo asignamos nosotros;
+            src: aquí pondremos dos tipos de valores.
+               local() -> pondremos el nombre de la fuente para buscarla en el ordenador del usuario, de esa forma podremos evitar descargarla
+               url() -> Si no encontramos esa fuente procederemos a descargarla.
+               Existe otro valor, menos usado que es format
+               format() -> Este valor lo pasaremos de forma opcional si queremos ser más específicos con la fuente que vamos a buscar o descargar, si no lo ponemos cogerá el primer formato soportado, si lo ponemos sólo usará el que hemos establecido, y si no lo encuentra no hará nada. 
+         }
 
-    El sistema hexadecimal es un sistema basado en 16 valores del 0 al 15
-    Utiliza los dígitos del 0 al 9 y las letras de la A a la F
-    
-    En este tipo de notacíon también necesitamos 256 valores.
+         Podemos añadirle más valores como font-style, font-weight y font-display(experimental), pero esos son opcionales.
 
-    Se compone de 16 caracteres en parejas ya que 16*16 = 256
-    0 1 2 3 4 5 6 7 8 9 A B C D E F
-    0 1 2 3 4 5 6 7 8 9 A B C D E F
+   Transformaciones de texto
+      Text-transform: Esta propiedad nos permite hacer transformaciones ESTÉTICAS en nuestro texto.
+      Admite los valores:
+         none: No se aplicará ninguna transformación.
+         uppercase: El texto se pondrá en mayúsculas
+         lowercase: El texto se pondrá en minúsculas
+         capitalize: Transforma la primera letra de cada palabra en mayúscula.
+   Adornos en el texto
+      Text-decoration: Esta propiedad nos permite controlar la línea que podemos poner en los textos.
+      Admite los valores:
+         none: Elimina cualquier línea.
+         underline: Coloca una linea bajo el texto.
+         overline: Coloca una linea sobre el texto.
+         line-through: Coloca una linea tachando el texto.
 
-    Para indicar que vamos a usar notación hexadecimal debemos usar el símbolo de hash/almohadilla # y a continuación usaremos esta notación por parejas.
-    #RRGGBB
-    Cuando una pareja usa el mismo valor se puede omitir el segundo valor, siempre que se haga en las 3 parejas.
+      Text-shadow: Funciona exáctamente igual que box-shadow, con la única diferencia de que no admite el valor inset ni la expansión de la sombra.
+      Los valores son: 
+         offsetX: desplazamiento horizontal.
+         offsetY: desplazamiento vertical
+         blur: desenfoque.
+         color: color, por defecto coge el del texto.
+   
+   Espaciado en fuentes y textos
+    letter-spacing: Establece la separación entre caracteres, se puede establecer en cualquier medida válida para CSS
 
-    rgb(255,255,255) -> #FFFFFF -> #FFF
-    rgb(0,0,0) -> #000000 -> #000
+    word-spacing: Establece la separación entre palabras,
+    se puede establecer en cualquier medida válida para CSS
 
-    También tenemos la opción de usar transparencias en hexadecimal añadiendo un cuarto canal que sigue las mismas normas.
+    line-height: Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multipliará por el font size del texto al que se lo estemos aplicando.
 
-    rgb(0 0 0 / .5) -> #00000080 ~> #0007
+   Orientación del texto.
+   writing-mode: Establece la dirección del texto
 
-  HSL / HSLA
-    El modo de color HSL es el más intuitivo para los humanos. Su nombre viene de las siglas Hue (tono) Saturation (saturación) y Lightness (luminancia)
-    
-    El primer valor es el ángulo en el círculo cromático donde 0 y 360 será el color rojo. Hay ciertos valores que os pueden servir como referencia para relacionar mejor los colores con sus ángulos.
-      0 -> rojo
-      60 -> amarillo
-      120 -> verde
-      180 -> cyan
-      240 -> azul
-      300 -> magenta
-
-    El segundo valor es la saturación o intensidad del color.
-      0% -> gris
-      100% -> color puro
-
-    El tercer valor es la luminosidad del color
-      0% -> negro, nada de luz
-      100% -> blanco, luz máxima
-
-    Nota: Es importante que aunque el valor de saturación o luminancia sea 0 hay que poner 0% si no, no funcionará
-
-    El modo HSL también admite transparencia y su sintaxis es la misma que la del modo RGB. Tenemos dos sintaxis disponible.
-      hsla(h,s,l,a)
-      hsl(h s l / a)
-    En ambos casos el valor alpha va de 0 a 1
-
-  Existen otros cuatro modos de color en los que está trabajando que serían CMYK (Cyan, Magenta, Yellow y Black), HWB (Hue, Whiteness, Blackness), lab(Lightness, distance a, distance b) y lch(Lightness, chroma, hue), todos están en el borrador del modulo de color de nivel 4 pero aún no es estándar.
 */
 
 * {
