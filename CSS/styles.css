@@ -114,12 +114,25 @@ body {
 }
 
 .text {
-   text-transform: capitalize;
-   text-shadow: 4px -10px 2px red;
+   /* letter-spacing: -1px; */
+   /* word-spacing: 20px; */
+   /* line-height: 30px; */
+   /* writing-mode: sideways-lr; */
+   /* writing-mode: sideways-rl; */
+   /* writing-mode: vertical-lr; vertical de izquierda a derecha */
+   /* writing-mode: vertical-rl; */ /* vertical de derecha a izquierda */
+   word-break: break-all;
+   width: 10px;
+   
 }
 
-.link {
-   color: inherit;
-   text-decoration: none;
+.wordContainer {
+   background-color: lightcoral;
+   height: 200px;
+   text-align: center;
+}
+
+.word {
+   line-height: 200px;
 }
 
