@@ -104,6 +104,11 @@
 
 */
 
+@font-face {
+   font-family: 'Fuente Mailand';
+   src: url(../assets/fonts/mailand.otf);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -111,8 +116,6 @@
 body {
    background-color: #333;
    color: aliceblue;
+   font-family: 'Fuente Mailand';
 }
 
-.icon {
-   color: red;
-}
